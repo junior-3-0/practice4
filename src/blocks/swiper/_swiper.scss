@@ -1,0 +1,84 @@
+.swiper {
+  width: 24rem;
+  margin: 0;
+  overflow: visible;
+  margin-bottom: 1.6rem;
+  margin-left: 1.6rem;
+
+  &-tech {
+    width: 24rem;
+    margin: 0;
+    overflow: visible;
+    margin-bottom: 1.6rem;
+    margin-left: 1.6rem;
+  }
+  &-wrapper {
+    width: 24rem;
+    box-sizing: border-box;
+    margin: 0 !important;
+  }
+  &-price {
+    width: 26rem;
+    margin: 0;
+    overflow: visible;
+    .swiper-wrapper {
+      box-sizing: border-box;
+    }
+  }
+
+  &-pagination {
+    position: static;
+
+    &-bullet {
+      width: 1.2rem;
+      height: 1.2rem;
+      background: #dddddd;
+
+      &-active {
+        background: #b5b6bc;
+      }
+    }
+  }
+  &-pagination-tech {
+    position: static;
+    text-align: center;
+  }
+  &-pagination-price {
+    position: static;
+    text-align: center;
+  }
+  &-pagination-hid {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2.4rem;
+    padding-left: 0;
+
+    &-tech {
+      width: 100%;
+      margin-bottom: 2.4rem;
+      margin-inline: 0;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    &-wrapper {
+      width: 100%;
+    }
+    &-price {
+      max-width: 100%;
+      margin: 0;
+      .swiper-wrapper {
+        display: table-row-group;
+        max-width: 100%;
+        margin: 0;
+        position: relative;
+      }
+    }
+  }
+}

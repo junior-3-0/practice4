@@ -1,0 +1,57 @@
+.price {
+  padding-bottom: 4rem;
+
+  &__subtitle {
+    margin-bottom: 1.6rem;
+    padding-bottom: 3rem;
+  }
+  &__body {
+    overflow: hidden;
+    padding-left: 1.6rem;
+  }
+  &__pagination {
+    margin-bottom: 1.6rem;
+  }
+  &__post {
+    padding-inline: 1.6rem;
+    margin-bottom: 1.6rem;
+    max-width: 45.3rem;
+    height: auto;
+  }
+  &__btn {
+    padding-inline: 1.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .price {
+    padding-bottom: 4.7rem;
+
+    &__subtitle {
+      margin-bottom: 3.1rem;
+    }
+    &__body {
+      padding-inline: 2.4rem;
+      margin-bottom: 3.2rem;
+    }
+    &__post {
+      padding-inline: 2.4rem;
+      max-width: 46.9rem;
+    }
+    &__btn {
+      padding-inline: 2.4rem;
+    }
+  }
+}
+@media (min-width: 1366px) {
+  .price {
+    padding-bottom: 5rem;
+
+    &__post {
+      padding-left: 3.2rem;
+    }
+    &__btn {
+      padding-inline: 3.2rem;
+    }
+  }
+}

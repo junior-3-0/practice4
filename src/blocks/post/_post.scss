@@ -1,0 +1,22 @@
+.post {
+  margin-bottom: 1.6rem;
+  overflow: hidden;
+  height: clamp(9rem, 21vw, 16rem);
+
+  &__text {
+    color: var(--text-color-main);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: 0.02rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .post {
+    &__text {
+      line-height: 2rem;
+    }
+  }
+}

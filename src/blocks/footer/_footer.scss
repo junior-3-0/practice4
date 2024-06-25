@@ -1,0 +1,62 @@
+.footer {
+  padding-top: 1.6rem;
+  padding-inline: 1.6rem;
+  padding-bottom: 1.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  border-top: 0.1rem solid var(--border-section);
+  background-color: var(--main-bg-color);
+
+  &__link:link,
+  &__link:active,
+  &__link:visited {
+    display: block;
+    max-width: 33rem;
+    color: var(--text-color-second);
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    opacity: 0.7218;
+    text-decoration: none;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-top: 3.2rem;
+    padding-inline: 2.4rem;
+    padding-bottom: 3.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3.5rem;
+
+    &__team {
+      .footer__link {
+        white-space: nowrap;
+        text-align: left;
+      }
+    }
+    &__policy {
+      white-space: nowrap;
+    }
+    &__mess {
+      text-align: right;
+
+      .footer__link {
+        text-align: right;
+      }
+    }
+  }
+}
+@media (min-width: 1366px) {
+  .footer {
+    padding-right: 3.3rem;
+    padding-bottom: 2.1rem;
+    padding-left: 3.1rem;
+    margin-left: 30.6rem;
+  }
+}

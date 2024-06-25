@@ -1,0 +1,28 @@
+.subtitle {
+  background: linear-gradient(270deg, #f8f8f8 0%, #fff 98.61%);
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  border-top: 0.2rem solid var(--border-section);
+  padding-inline: 1.6rem;
+
+  &__text {
+    margin: 0;
+    color: var(--text-color-second);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: -0.02rem;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    padding-inline: 2.4rem;
+  }
+}
+@media (min-width: 1366px) {
+  .subtitle {
+    padding-inline: 3.2rem;
+  }
+}
