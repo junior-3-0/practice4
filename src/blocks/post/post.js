@@ -1,8 +1,8 @@
 //POST
-const post = document.querySelector('.post')
-const btnPost = document.querySelector('.promo__btn')
+export const post = document.querySelector('.post')
+export const btnPost = document.querySelector('.promo__btn')
 
-btnPost.addEventListener('click', () => {
+export function openPost() {
   if (!btnPost.classList.contains('btn--close')) {
     post.style.height = 'auto'
     btnPost.classList.remove('btn--more')
@@ -16,4 +16,4 @@ btnPost.addEventListener('click', () => {
     btnPost.innerHTML =
       '<img class="btn__img" src="./img/expand.svg" alt=""/>Читать далее'
   }
-})
+}

@@ -1,22 +1,20 @@
 //CARDS
 
-let windowWidth = window.innerWidth
+export const repairTech = document.querySelector('.tech-wrap')
+export const cardsTech = repairTech.querySelectorAll('.card')
+export const btnMoreTech = repairTech.querySelector('.btn--more')
+export const btnCloseTech = repairTech.querySelector('.btn--close')
 
-const repairTech = document.querySelector('.tech-wrap')
-const cardsTech = repairTech.querySelectorAll('.card')
-const btnMoreTech = repairTech.querySelector('.btn--more')
-const btnCloseTech = repairTech.querySelector('.btn--close')
+export const repairBrand = document.querySelector('.brand-wrap')
+export const cardsBrand = repairBrand.querySelectorAll('.card')
+export const btnMoreBrand = repairBrand.querySelector('.btn--more')
+export const btnCloseBrand = repairBrand.querySelector('.btn--close')
 
-const repairBrand = document.querySelector('.brand-wrap')
-const cardsBrand = repairBrand.querySelectorAll('.card')
-const btnMoreBrand = repairBrand.querySelector('.btn--more')
-const btnCloseBrand = repairBrand.querySelector('.btn--close')
+export const pagination1 = document.querySelector('.swiper-pagination')
+export const pagination2 = document.querySelector('.swiper-pagination-tech')
+export const pagination3 = document.querySelector('.swiper-pagination-price')
 
-const pagination1 = document.querySelector('.swiper-pagination')
-const pagination2 = document.querySelector('.swiper-pagination-tech')
-const pagination3 = document.querySelector('.swiper-pagination-price')
-
-function numberCards(width) {
+export function numberCards(width) {
   if (width > 767 && width < 1200) {
     pagination1.classList.add('swiper-pagination-hid')
     pagination2.classList.add('swiper-pagination-hid')
@@ -32,10 +30,14 @@ function numberCards(width) {
     pagination3.classList.remove('swiper-pagination-hid')
     btnMoreTech.classList.add('btn--hid')
     btnMoreBrand.classList.add('btn--hid')
+    addCards(cardsBrand, cardsBrand.length, btnMoreBrand)
+    addCards(cardsTech, cardsTech.length, btnMoreTech)
   }
 }
 
-function addCards(cards, number, button) {
+export function addCards(cards, number, button) {
+  let windowWidth = window.innerWidth
+
   cards.forEach((card, i) => {
     card.classList.add('card--hidden')
     if (i + 1 <= number) {
@@ -62,22 +64,32 @@ function addCards(cards, number, button) {
   })
 
   btnCloseBrand.addEventListener('click', () => {
+    windowWidth = window.innerWidth
     if (windowWidth > 767) {
       addCards(cardsBrand, 6, btnMoreBrand)
     }
-    if (windowWidth > 1366) {
+    if (windowWidth > 1199) {
       addCards(cardsBrand, 8, btnMoreBrand)
     }
+    if (windowWidth < 768) {
+      addCards(cardsBrand, cardsBrand.length, btnMoreBrand)
+    }
+
     btnCloseBrand.classList.add('btn--hid')
   })
 
   btnCloseTech.addEventListener('click', () => {
+    windowWidth = window.innerWidth
     if (windowWidth > 767) {
       addCards(cardsTech, 3, btnMoreTech)
     }
     if (windowWidth > 1366) {
       addCards(cardsTech, 4, btnMoreTech)
     }
+    if (windowWidth < 768) {
+      addCards(cardsTech, cardsTech.length, btnMoreTech)
+    }
+
     btnCloseTech.classList.add('btn--hid')
   })
 }

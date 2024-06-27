@@ -1,3 +1,5 @@
+import { Swiper } from '../swiper/swiper-bundle.min'
+
 //SWIPER
 export function swiperReloader() {
   let swiper
