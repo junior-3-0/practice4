@@ -361,7 +361,8 @@ body {
   box-sizing: inherit; }
 
 main {
-  background-color: var(--main-bg-color); }
+  background-color: var(--main-bg-color);
+  transition: all 0.7s ease; }
 
 @media (min-width: 1366px) {
   main {
@@ -743,7 +744,10 @@ main {
     .menu__button-close {
       display: none; }
     .menu__logo {
-      margin-left: 0; } }
+      margin-left: 0; }
+    .menu--hidden {
+      opacity: 1;
+      transform: translateX(0); } }
 
 .menu-nav {
   margin-bottom: 2.2rem; }
