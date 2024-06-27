@@ -17,6 +17,7 @@ export function closedMenu() {
 }
 
 export function overlayClick() {
+  windowWidth = window.innerWidth
   if (windowWidth < 1366) {
     menu.classList.add('menu--hidden')
     overlay.classList.add('overlay--hidden')
